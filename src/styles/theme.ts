@@ -35,4 +35,7 @@ export const theme = extendTheme({
     body: montSerrat.style.fontFamily,
     mono: montSerrat.style.fontFamily,
   },
+  shadows: {
+    primary: '0px 4px 84px 0px rgba(37, 39, 90, 0.18)',
+  },
 });
