@@ -1,5 +1,3 @@
 import React from 'react';
 
-export const HomeScreen = () => {
-  return <div>HomeScreen</div>;
-};
+export const HomeScreen = () => <div>HomeScreen</div>;

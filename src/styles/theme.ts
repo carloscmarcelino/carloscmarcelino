@@ -1,5 +1,4 @@
 import { extendTheme } from '@chakra-ui/react';
-
 import { Montserrat } from 'next/font/google';
 
 const montSerrat = Montserrat({
