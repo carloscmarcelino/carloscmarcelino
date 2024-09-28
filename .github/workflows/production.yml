@@ -1,0 +1,58 @@
+name: Trigger Vercel Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Git
+        env:
+          GITHUB_USER: ${{ secrets.LOOMI_DEV_USERNAME }}
+          GITHUB_EMAIL: ${{ secrets.LOOMI_DEV_EMAIL }}
+        run: |
+          git config --global user.name "$GITHUB_USER"
+          git config --global user.email "$GITHUB_EMAIL"
+      - name: Update deploy file register
+        run: |
+          timestamp=$(date +'%d-%m-%Y %H:%M:%S')
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          deploy_content="Deploy triggered for branch $branch at $timestamp"
+
+          readme_content=$(cat README.md)
+          last_line=$(tail -n 1 README.md)
+
+          if [[ $last_line == *"Deploy triggered for branch"* ]]; then
+            # Replace the last line with the new deploy log
+            new_readme_content=$(echo "$readme_content" | sed '$s/.*/'"$deploy_content"'/')
+          else
+            new_readme_content=$(echo -e "$readme_content\n$deploy_content")
+          fi
+
+          echo "$new_readme_content" > README.md
+
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "ci: trigger vercel deploy"
+
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "CI: trigger vercel deploy"
+          branch: ci/release
+          base: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge Pull Request
+        run: gh pr merge --squash --auto "$PR_NUMBER"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.create_pr.outputs.pull-request-number }}
