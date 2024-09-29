@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button';
-import { GITHUB_URL, LINKEDIN_URL } from '@/config';
+import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL } from '@/config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 
 export const AboutMeSection = () => (
   <section className="flex flex-col gap-5 lg:gap-20 lg:flex-row justify-between">
@@ -63,6 +63,19 @@ export const AboutMeSection = () => (
             }}
           >
             <FaGithub color="white" fontSize="1.125rem" />
+          </motion.div>
+        </Link>
+        <Link href={WHATSAPP_URL} target="_blank">
+          <motion.div
+            viewport={{ amount: 0.2, once: true }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              ease: [0.645, 0.045, 0.355, 1],
+              duration: 1,
+            }}
+          >
+            <FaWhatsapp color="white" fontSize="1.125rem" />
           </motion.div>
         </Link>
       </div>
