@@ -13,7 +13,9 @@ const tailwindConfig = {
         primary: {
           DEFAULT: 'var(--primary)',
         },
+        white: 'var(--white)',
         dark: 'var(--dark)',
+        blue: 'var(--blue)',
       },
       fontSize: {
         title: ['24px', '29.17px'],
