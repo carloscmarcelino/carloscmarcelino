@@ -10,6 +10,11 @@
   body {
     @apply bg-slate-200 text-black;
   }
+
+  :root {
+    --primary: hsla(0, 0%, 13%, 1);
+    --dark: hsl(220, 5%, 12%);
+  }
 }
 
 @layer utilities {

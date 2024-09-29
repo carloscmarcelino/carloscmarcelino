@@ -9,6 +9,18 @@ const tailwindConfig = {
       sans: ['var(--font-sans)'],
     },
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: 'var(--primary)',
+        },
+        dark: 'var(--dark)',
+      },
+      fontSize: {
+        title: ['24px', '29.17px'],
+        description: ['16px', '24px'],
+        text1: ['12px', '14.58px'],
+      },
+
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

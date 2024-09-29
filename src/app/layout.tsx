@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { ReactNode } from 'react';
 
+import { cn } from '@/lib/utils';
 import { GlobalProvider } from '@/providers';
 
 const montserratFont = Montserrat({
@@ -23,7 +24,7 @@ type RootLayoutProps = Readonly<{
 
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="pt_BR" className={montserratFont.variable}>
-    <body className={montserratFont.className}>
+    <body className={cn('bg-dark', montserratFont.className)}>
       <GlobalProvider>{children}</GlobalProvider>
     </body>
   </html>
