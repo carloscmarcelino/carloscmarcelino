@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { GITHUB_URL, LINKEDIN_URL } from '@/config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -6,7 +7,7 @@ import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export const AboutMeSection = () => (
-  <section className="flex flex-col lg:gap-20 lg:flex-row justify-between">
+  <section className="flex flex-col gap-5 lg:gap-20 lg:flex-row justify-between">
     <div className="flex flex-col">
       <div className="flex flex-col gap-5">
         <motion.p
@@ -19,7 +20,7 @@ export const AboutMeSection = () => (
           }}
           className="text-white text-title font-bold"
         >
-          Hello world, Sou Carlos! 👩🏻‍💻
+          Olá, Sou Carlos! 👩🏻‍💻
         </motion.p>
         <motion.p
           viewport={{ amount: 0.2, once: true }}

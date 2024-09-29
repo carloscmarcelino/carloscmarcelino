@@ -13,12 +13,12 @@ import {
 import { cn } from '@/lib/utils';
 
 const data = {
-  title: 'Projetos',
+  title: 'Em destaque',
   projects: [
     {
       title: 'Moura Dubeux',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+        'Criação do novo website da Moura Dubeux, uma das maiores construtoras do Brasil, focado em desempenho, garantindo carregamento rápido e uma indexação eficiente no Google, atendendo às necessidades de SEO.',
       image: '/assets/projects/projetoMoura.png',
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://www.mouradubeux.com.br/pernambuco/recife/boa-viagem/residenciais-condominio/3-quartos/ayme-boa-viagem',
@@ -26,34 +26,24 @@ const data = {
     {
       title: 'Profrotas-pdv',
       description:
-        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+        'Desenvolvimento do sistema Profrotas, uma solução de gestão de abastecimento 100% digital do Posto Ipiranga.',
       image: '/assets/projects/projetoProfrotasPdv.png',
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://profrotas-pdv.vercel.app/login',
     },
     {
       title: 'Papo de Cabeça',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      description: 'Desenvolvimento da plataforma de educação Papo de Cabeça.',
       image: '/assets/projects/projetoAnima.png',
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://www.papodecabeca.com.br',
     },
     {
       title: 'Profrotas Website',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      description: 'Criação do Website para o Profrotas',
       image: '/assets/projects/projetoProfrotasWebsite.png',
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://profrotas-website.vercel.app/',
-    },
-    {
-      title: 'Experience Tattoo',
-      description:
-        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
-      image: '/assets/projects/projetoTattooExperience.png',
-      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
-      url: 'https://experiencetattooink.com.br',
     },
   ],
 };
