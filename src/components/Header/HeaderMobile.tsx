@@ -17,10 +17,14 @@ export const HeaderMobile = ({ options }: HeaderMobileProps) => {
   return (
     <header
       className={cn(
-        'lg:hidden flex justify-end px-6 py-[1.375rem] bg-dark2 fixed w-screen transition-all duration-300 overflow-hidden z-[100]',
+        'lg:hidden flex justify-between px-6 py-[1.375rem] bg-dark2 fixed w-screen transition-all duration-300 overflow-hidden z-[100]',
         isOpen ? 'h-[40vh]' : 'h-[8vh]',
       )}
     >
+      <Link href="/">
+        <p className="font-bold text-white text-text1 opacity-70 hover:opacity-100">Home</p>
+      </Link>
+
       <button
         onClick={onToggle}
         className={cn(

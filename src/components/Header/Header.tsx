@@ -15,7 +15,7 @@ const options = [
   },
   {
     label: 'Experiências',
-    href: '',
+    href: '/experiencias',
   },
   {
     label: 'Projetos',

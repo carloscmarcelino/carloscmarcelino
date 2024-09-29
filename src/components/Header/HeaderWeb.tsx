@@ -4,6 +4,7 @@ import { useIsScrolled } from '@/hooks';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { HeaderOptions } from './Header';
+import Link from 'next/link';
 
 type HeaderWebProps = {
   options: HeaderOptions[];
@@ -23,13 +24,15 @@ export const HeaderWeb = ({ options }: HeaderWebProps) => {
         }}
         className="flex justify-between max-w-[1280px] mx-auto px-20"
       >
-        <div>
+        <Link href="/">
           <p className="font-bold text-white text-text1 opacity-70 hover:opacity-100">Home</p>
-        </div>
+        </Link>
 
         <div className="flex gap-10">
           {options.map((option) => (
-            <p className="text-white text-text1 opacity-70 hover:opacity-100">{option.label}</p>
+            <Link href={option.href}>
+              <p className="text-white text-text1 opacity-70 hover:opacity-100">{option.label}</p>
+            </Link>
           ))}
         </div>
       </motion.div>
