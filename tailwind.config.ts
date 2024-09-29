@@ -15,6 +15,7 @@ const tailwindConfig = {
         },
         white: 'var(--white)',
         dark: 'var(--dark)',
+        dark2: 'var(--dark-2)',
         blue: 'var(--blue)',
       },
       fontSize: {

@@ -13,7 +13,16 @@ import {
 import { cn } from '@/lib/utils';
 
 export const ProjectsSection = () => (
-  <section className="flex flex-col py-40 gap-5">
+  <motion.section
+    viewport={{ amount: 0.2, once: true }}
+    initial={{ y: 100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{
+      ease: [0.645, 0.045, 0.355, 1],
+      duration: 1,
+    }}
+    className="flex flex-col py-40 gap-5"
+  >
     <p className="text-white text-title font-bold">Projetos</p>
     <Carousel className="flex flex-col gap-5">
       <CarouselContent>
@@ -91,5 +100,5 @@ export const ProjectsSection = () => (
         <CarouselNext />
       </div>
     </Carousel>
-  </section>
+  </motion.section>
 );

@@ -14,6 +14,7 @@
   :root {
     --primary: hsla(0, 0%, 13%, 1);
     --dark: hsl(220, 5%, 12%);
+    --dark-2: hsl(0, 0%, 9%);
     --white: hsl(0, 0%, 98%);    ;
     --blue: hsl(210, 80%, 50%);
   }

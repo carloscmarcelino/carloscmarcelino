@@ -11,7 +11,7 @@ export const AboutMeSection = () => (
     <div className="flex flex-col">
       <div className="flex flex-col gap-5">
         <motion.p
-          viewport={{ amount: 0.5, once: true }}
+          viewport={{ amount: 0.2, once: true }}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -23,7 +23,7 @@ export const AboutMeSection = () => (
           Hello world, Sou Carlos! 👩🏻‍💻
         </motion.p>
         <motion.p
-          viewport={{ amount: 0.5, once: true }}
+          viewport={{ amount: 0.2, once: true }}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -41,7 +41,7 @@ export const AboutMeSection = () => (
       <div className="flex gap-5">
         <Link href={linkedinUrl} target="_blank">
           <motion.div
-            viewport={{ amount: 0.5, once: true }}
+            viewport={{ amount: 0.2, once: true }}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -54,7 +54,7 @@ export const AboutMeSection = () => (
         </Link>
         <Link href={linkedinUrl} target="_blank">
           <motion.div
-            viewport={{ amount: 0.5, once: true }}
+            viewport={{ amount: 0.2, once: true }}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -69,7 +69,7 @@ export const AboutMeSection = () => (
     </div>
 
     <motion.div
-      viewport={{ amount: 0.5, once: true }}
+      viewport={{ amount: 0.2, once: true }}
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{

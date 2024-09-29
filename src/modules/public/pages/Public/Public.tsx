@@ -4,7 +4,7 @@ import { AboutMeSection } from '../components/AboutMeSection';
 import { ProjectsSection } from '../components/ProjectsSection/ProjectsSection';
 
 export const Public = () => (
-  <main className="max-w-[1366px] mx-auto py-40 px-20">
+  <main className="max-w-[1366px] mx-auto pt-60 py-40 px-20">
     <AboutMeSection />
 
     <ProjectsSection />
