@@ -20,7 +20,6 @@ const tailwindConfig = {
         description: ['16px', '24px'],
         text1: ['12px', '14.58px'],
       },
-
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
