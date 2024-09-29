@@ -17,7 +17,7 @@ export const Header = () => {
           ease: [0.645, 0.045, 0.355, 1],
           duration: 1,
         }}
-        className="flex justify-between max-w-[1366px] mx-auto px-20"
+        className="flex justify-between max-w-[1280px] mx-auto px-20"
       >
         <div>
           <p className="font-bold text-white text-text1 opacity-70 hover:opacity-100">Home</p>

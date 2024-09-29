@@ -1,10 +1,9 @@
+import { GITHUB_URL, LINKEDIN_URL } from '@/config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-
-import { linkedinUrl } from '@/config';
 
 export const AboutMeSection = () => (
   <section className="flex justify-between">
@@ -39,7 +38,7 @@ export const AboutMeSection = () => (
       </div>
 
       <div className="flex gap-5">
-        <Link href={linkedinUrl} target="_blank">
+        <Link href={LINKEDIN_URL} target="_blank">
           <motion.div
             viewport={{ amount: 0.2, once: true }}
             initial={{ x: -100, opacity: 0 }}
@@ -52,7 +51,7 @@ export const AboutMeSection = () => (
             <FaLinkedinIn color="white" fontSize="1.125rem" />
           </motion.div>
         </Link>
-        <Link href={linkedinUrl} target="_blank">
+        <Link href={GITHUB_URL} target="_blank">
           <motion.div
             viewport={{ amount: 0.2, once: true }}
             initial={{ x: -100, opacity: 0 }}

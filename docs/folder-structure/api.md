@@ -1,1 +1,0 @@
-## Estrutura da pasta @/api
