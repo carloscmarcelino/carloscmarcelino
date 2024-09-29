@@ -12,6 +12,44 @@ import {
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 
+const data = {
+  title: 'Projetos',
+  projects: [
+    {
+      title: 'Moura Dubeux',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      image: '/assets/projects/projetoMoura.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://www.mouradubeux.com.br/pernambuco/recife/boa-viagem/residenciais-condominio/3-quartos/ayme-boa-viagem',
+    },
+    {
+      title: 'Profrotas-pdv',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      image: '/assets/projects/projetoProfrotasPdv.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://profrotas-pdv.vercel.app/login',
+    },
+    {
+      title: 'Papo de Cabeça',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      image: '/assets/projects/projetoAnima.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://www.papodecabeca.com.br',
+    },
+    {
+      title: 'Profrotas Website',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      image: '/assets/projects/projetoProfrotasWebsite.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://profrotas-website.vercel.app/',
+    },
+  ],
+};
+
 export const ProjectsSection = () => (
   <motion.section
     viewport={{ amount: 0.2, once: true }}
@@ -23,19 +61,10 @@ export const ProjectsSection = () => (
     }}
     className="flex flex-col py-40 gap-5"
   >
-    <p className="text-white text-title font-bold">Projetos</p>
+    <p className="text-white text-title font-bold">{data.title}</p>
     <Carousel className="flex flex-col gap-5">
       <CarouselContent>
-        {[
-          {
-            title: 'Profrotas-pdv',
-            description:
-              'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
-            image: '/assets/projects/projetoProfrotasPdv.png',
-            gradient: 'bg-gradient-to-b from-black to-transparent',
-            url: 'https://profrotas-pdv.vercel.app/login',
-          },
-        ].map((project, index) => (
+        {data.projects.map((project, index) => (
           <CarouselItem key={index}>
             <Link href={project.url} target="_blank">
               <motion.div
@@ -43,7 +72,7 @@ export const ProjectsSection = () => (
                   backgroundImage: `url(${project.image})`,
                 }}
                 whileHover="hover"
-                className="relative flex flex-col justify-between gap-5 p-10 h-[30rem] w-[30rem] text-white bg-cover bg-no-repeat bg-center rounded-xl"
+                className="relative flex flex-col justify-between gap-5 p-10 h-[30rem] w-[45rem] text-white bg-cover bg-no-repeat bg-center rounded-xl"
               >
                 {project.gradient && (
                   <div className={cn('absolute left-0 bottom-0 w-full h-full', project.gradient)} />

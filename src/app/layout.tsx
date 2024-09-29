@@ -14,8 +14,8 @@ const montserratFont = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Next Leap',
-  description: 'Next.js boilerplate made by Loomi',
+  title: 'Carlos Marcelino',
+  description: 'Desenvolvedor front end',
 };
 
 type RootLayoutProps = Readonly<{
