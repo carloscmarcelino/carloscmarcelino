@@ -13,7 +13,7 @@ export const HeaderWeb = ({ options }: HeaderWebProps) => {
   const { isScrolled } = useIsScrolled();
 
   return (
-    <header className="hidden lg:fixed bg-dark2 w-full z-50">
+    <header className="hidden lg:block fixed bg-dark2 w-full z-50">
       <motion.div
         initial={{ paddingTop: '3rem', paddingBottom: '3rem' }}
         animate={isScrolled && { paddingTop: '1.5rem', paddingBottom: '1.5rem' }}
