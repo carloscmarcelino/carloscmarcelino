@@ -47,6 +47,14 @@ const data = {
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://profrotas-website.vercel.app/',
     },
+    {
+      title: 'Experience Tattoo',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',
+      image: '/assets/projects/projetoTattooExperience.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://experiencetattooink.com.br',
+    },
   ],
 };
 
@@ -59,7 +67,7 @@ export const ProjectsSection = () => (
       ease: [0.645, 0.045, 0.355, 1],
       duration: 1,
     }}
-    className="flex flex-col py-40 gap-5"
+    className="flex flex-col py-20 lg:py-40 gap-5"
   >
     <p className="text-white text-title font-bold">{data.title}</p>
     <Carousel className="flex flex-col gap-5">
@@ -72,13 +80,13 @@ export const ProjectsSection = () => (
                   backgroundImage: `url(${project.image})`,
                 }}
                 whileHover="hover"
-                className="relative flex flex-col justify-between gap-5 p-10 h-[30rem] w-[45rem] text-white bg-cover bg-no-repeat bg-center rounded-xl"
+                className="relative flex flex-col justify-between gap-4 lg:gap-5 p-5 lg:p-10 h-[30rem] w-[22rem] lg:w-[45rem] text-white bg-cover bg-no-repeat bg-center rounded-xl"
               >
                 {project.gradient && (
                   <div className={cn('absolute left-0 bottom-0 w-full h-full', project.gradient)} />
                 )}
 
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-4 lg:gap-0">
                   <motion.p
                     initial={{
                       opacity: 1,
@@ -94,7 +102,7 @@ export const ProjectsSection = () => (
                       ease: [0.645, 0.045, 0.355, 1],
                       duration: 0.5,
                     }}
-                    className="text-title z-10"
+                    className="hidden lg:block text-title z-10"
                   >
                     {project.title}
                   </motion.p>
@@ -113,10 +121,13 @@ export const ProjectsSection = () => (
                       ease: [0.645, 0.045, 0.355, 1],
                       duration: 0.5,
                     }}
-                    className="text-description z-10"
+                    className="hidden lg:block text-description z-10"
                   >
                     {project.description}
                   </motion.p>
+
+                  <p className="lg:hidden text-title z-10">{project.title}</p>
+                  <p className="lg:hidden text-description z-10">{project.description}</p>
                 </div>
               </motion.div>
             </Link>

@@ -6,7 +6,7 @@ import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export const AboutMeSection = () => (
-  <section className="flex justify-between">
+  <section className="flex flex-col lg:gap-20 lg:flex-row justify-between">
     <div className="flex flex-col">
       <div className="flex flex-col gap-5">
         <motion.p
