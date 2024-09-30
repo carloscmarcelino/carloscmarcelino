@@ -32,18 +32,18 @@ const data = {
       url: 'https://profrotas-pdv.vercel.app/login',
     },
     {
-      title: 'Papo de Cabeça',
-      description: 'Desenvolvimento da plataforma de educação Papo de Cabeça.',
-      image: '/assets/projects/projetoAnima.png',
-      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
-      url: 'https://www.papodecabeca.com.br',
-    },
-    {
       title: 'Profrotas Website',
       description: 'Criação do Website para o Profrotas',
       image: '/assets/projects/projetoProfrotasWebsite.png',
       gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
       url: 'https://profrotas-website.vercel.app/',
+    },
+    {
+      title: 'Papo de Cabeça',
+      description: 'Desenvolvimento da plataforma de educação Papo de Cabeça.',
+      image: '/assets/projects/projetoAnima.png',
+      gradient: 'bg-gradient-to-b from-dark3 from-0% to-transparent to-70%',
+      url: 'https://www.papodecabeca.com.br',
     },
   ],
 };
@@ -65,7 +65,7 @@ export const ProjectsSection = () => (
       <Link href="https://loomi.digital/en/" target="_blank">
         Loomi
       </Link>{' '}
-      participei de mais de 15 projetos, focando em performance, SEO, e experiência do usuário.
+      participei em mais de 15 projetos.
     </p>
     <Carousel className="flex flex-col gap-5">
       <CarouselContent>
