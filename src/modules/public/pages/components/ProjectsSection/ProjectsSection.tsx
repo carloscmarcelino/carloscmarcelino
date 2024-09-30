@@ -60,6 +60,13 @@ export const ProjectsSection = () => (
     className="flex flex-col py-20 lg:py-40 gap-5"
   >
     <p className="text-white text-title font-bold">{data.title}</p>
+    <p className="text-white text-description mb-6 max-w-[40rem]">
+      Como desenvolvedor na{' '}
+      <Link href="https://loomi.digital/en/" target="_blank">
+        Loomi
+      </Link>{' '}
+      participei de mais de 15 projetos, focando em performance, SEO, e experiência do usuário.
+    </p>
     <Carousel className="flex flex-col gap-5">
       <CarouselContent>
         {data.projects.map((project, index) => (
