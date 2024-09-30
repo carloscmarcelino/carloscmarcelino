@@ -1,10 +1,9 @@
-import { Button } from '@/components/ui/button';
 import { GITHUB_URL, LINKEDIN_URL, WHATSAPP_URL } from '@/config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export const AboutMeSection = () => (
   <section className="flex flex-col gap-5 lg:gap-20 lg:flex-row justify-between">
@@ -38,47 +37,26 @@ export const AboutMeSection = () => (
         </motion.p>
       </div>
 
-      <div className="flex gap-5">
+      <motion.div
+        viewport={{ amount: 0.2, once: true }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          ease: [0.645, 0.045, 0.355, 1],
+          duration: 1,
+        }}
+        className="flex gap-5"
+      >
+        <Link href={WHATSAPP_URL} target="_blank">
+          <FaWhatsapp color="white" fontSize="1.125rem" />
+        </Link>
         <Link href={LINKEDIN_URL} target="_blank">
-          <motion.div
-            viewport={{ amount: 0.2, once: true }}
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              ease: [0.645, 0.045, 0.355, 1],
-              duration: 1,
-            }}
-          >
-            <FaLinkedinIn color="white" fontSize="1.125rem" />
-          </motion.div>
+          <FaLinkedin color="white" fontSize="1.125rem" />
         </Link>
         <Link href={GITHUB_URL} target="_blank">
-          <motion.div
-            viewport={{ amount: 0.2, once: true }}
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              ease: [0.645, 0.045, 0.355, 1],
-              duration: 1,
-            }}
-          >
-            <FaGithub color="white" fontSize="1.125rem" />
-          </motion.div>
+          <FaGithub color="white" fontSize="1.125rem" />
         </Link>
-        <Link href={WHATSAPP_URL} target="_blank">
-          <motion.div
-            viewport={{ amount: 0.2, once: true }}
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              ease: [0.645, 0.045, 0.355, 1],
-              duration: 1,
-            }}
-          >
-            <FaWhatsapp color="white" fontSize="1.125rem" />
-          </motion.div>
-        </Link>
-      </div>
+      </motion.div>
     </div>
 
     <motion.div
